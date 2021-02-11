@@ -13,6 +13,7 @@ import { ContainerComponent } from './components/container/container.component';
 import { CharacterComponent } from './components/character/character.component';
 import { HomeComponent } from './views/home/home.component';
 import { CharacterProfileComponent } from './views/character-profile/character-profile.component';
+import { CharactersComponent } from './components/characters/characters.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CharacterProfileComponent } from './views/character-profile/character-p
     ContainerComponent,
     CharacterComponent,
     HomeComponent,
-    CharacterProfileComponent
+    CharacterProfileComponent,
+    CharactersComponent
   ],
   imports: [
     BrowserModule,
