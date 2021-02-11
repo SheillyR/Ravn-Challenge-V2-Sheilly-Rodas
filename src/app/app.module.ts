@@ -20,7 +20,7 @@ import { CharacterProfileComponent } from './views/character-profile/character-p
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
