@@ -19,6 +19,7 @@ $error-text-color: #ec5757;
   margin-top: 16px;
   letter-spacing: 0.0125em;
 }
+
 .error-message {
   color: $error-text-color;
   @extend %style-text;

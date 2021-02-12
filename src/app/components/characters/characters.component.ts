@@ -10,7 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class CharactersComponent implements OnInit {
   characters = [] as any;
   loading: Boolean = true;
-  error!: string;
+  error: Boolean = false;
 
   constructor(public api: ApiService) { }
 
@@ -18,7 +18,7 @@ export class CharactersComponent implements OnInit {
     // Get data from the API
     this.api.getCharacters().pipe(map(result => result)).subscribe(({data, loading}) => {
       if (data.allPeople.people) this.characters = data.allPeople.people;
-      else this.error = "Failed to Load Data";
+      else this.error = true;
       this.loading = loading;
     })
   }
