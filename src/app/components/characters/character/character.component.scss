@@ -1,0 +1,44 @@
+$character-name-color: #333333;
+$character-name-font: "SF Pro Display";
+$paragraph-color: #828282;
+
+.card {
+  display: flex;
+  flex-direction: row;
+  margin-left: 16px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.character-info {
+  width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  h5 {
+    color: $character-name-color;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0125em;
+    margin-top: 16px;
+  }
+  p {
+    color: $paragraph-color;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.0125em;
+    margin-top: -8px;
+  }
+}
+
+.greater-than-sign {
+  width: 10%;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-left: 40px;
+}
