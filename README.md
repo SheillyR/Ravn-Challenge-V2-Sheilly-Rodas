@@ -6,7 +6,7 @@
 - [2. Working application](#2-working-application)
 - [3. Technologies used](#3-technologies-used)
 - [4. Development server](#4-development-server)
-- [4. Project link](#4-project-link)
+- [5. Project link](#5-project-link)
 
 ---
 
