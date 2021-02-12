@@ -5,3 +5,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "sfpro regular";
+  src: url("./assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "sfpro bold";
+  src: url("./assets/fonts/FontsFree-Net-SFProDisplay-Bold.ttf")
+    format("truetype");
+}
