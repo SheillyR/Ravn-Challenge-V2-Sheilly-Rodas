@@ -18,6 +18,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## 2. Working application
 
+### List of characters
+
+<div align="center">
+<img src="src/assets/images/allpeople-mobile.png" alt="List of characters" width="60%">
+</div>
+
+### Details of each character
+
+<div align="center">
+<img src="src/assets/images/details-people-mobile.png" alt="Details of character" width="60%">
+</div>
+
 ## 3. Technologies used
 
 - [x] [Angular]
