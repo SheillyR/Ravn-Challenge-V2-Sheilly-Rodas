@@ -1,4 +1,4 @@
-# Mobile web application of Star Wars 🌌🔫
+# Star Wars Mobile Web App 🌌🔫
 
 ## Index
 
@@ -21,13 +21,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### List of characters
 
 <div align="center">
-<img src="src/assets/images/allpeople-mobile.png" alt="List of characters" width="50%" height="50%">
+<img src="src/assets/images/allpeople-mobile.png" alt="List of characters" width="30%" height="30%">
+<p><strong>Image N°1. </strong>List of characters in mobile</p>
 </div>
 
 ### Details of each character
 
 <div align="center">
-<img src="src/assets/images/details-people-mobile.png" alt="Details of character" width="50%" height="50%">
+<img src="src/assets/images/details-people-mobile.png" alt="Details of character" width="30%" height="30%">
+<p><strong>Image N°2. </strong>Details of each character in mobile</p>
 </div>
 
 ## 3. Technologies used
@@ -42,6 +44,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## 5. Project link 🔗
+## 5. Project links 🔗
 
-Project Link : https://sheillyr.github.io/Ravn-Challenge-V2-Sheilly-Rodas/home
+- Project Link : https://sheillyr.github.io/Ravn-Challenge-V2-Sheilly-Rodas/home
+- Show site in mobile view: https://www.responsinator.com/?url=https%3A%2F%2Fsheillyr.github.io%2FRavn-Challenge-V2-Sheilly-Rodas%2Fhome
+- Project Board in GitHub: https://github.com/SheillyR/Ravn-Challenge-V2-Sheilly-Rodas/projects/1
