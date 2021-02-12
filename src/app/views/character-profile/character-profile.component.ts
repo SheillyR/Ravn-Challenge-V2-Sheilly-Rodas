@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-character-profile',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterProfileComponent implements OnInit {
 
-  constructor() { }
+  id!: string;
+  characterProfile!: any;
+
+  constructor(public activatedRoute: ActivatedRoute, public api: ApiService) { }
 
   ngOnInit(): void {
+    this.id = history.state.data;
+    this.characterProfile = this.api.getCharacterProfile(this.id).subscribe(result => {
+      this.characterProfile = result.data.person;
+      console.log(this.characterProfile);
+      
+    });
+    console.log(history.state.data)
   }
 
 }

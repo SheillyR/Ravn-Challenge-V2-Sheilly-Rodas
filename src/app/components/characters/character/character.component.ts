@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-character',
@@ -10,9 +10,8 @@ export class CharacterComponent implements OnInit {
   @Input() c = {} as any;
   
   specie!: any;
-  characterProfile!: any;
 
-  constructor(public api: ApiService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     if(this.c.species === null){
@@ -24,9 +23,6 @@ export class CharacterComponent implements OnInit {
   }
 
   showCharacterProfile(id: string){
-    this.characterProfile = this.api.getCharacterProfile(id).subscribe(result => {
-      this.characterProfile = result.data.person;
-      console.log(this.characterProfile);
-    });
+    this.router.navigate(['character-profile'], {state: { data: id }});
   }
 }
