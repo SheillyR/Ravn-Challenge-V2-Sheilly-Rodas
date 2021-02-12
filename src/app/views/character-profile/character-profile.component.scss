@@ -1,13 +1,54 @@
-$nav-color: #121212;
-$text-color: #ffffff;
+$header-color: #121212;
+$header-text-color: #ffffff;
+$title-color: #333333;
+$subtitle-color: #828282;
 $font-text: "SF Pro Display";
+
+%style-text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.0125em;
+}
+
 nav {
-  background-color: $nav-color;
+  background-color: $header-color;
   justify-content: center;
   h2 {
-    color: $text-color;
+    color: $header-text-color;
     font-family: $font-text;
     font-size: 17px;
     letter-spacing: 0.0125em;
+  }
+}
+
+section {
+  font-family: $font-text;
+  h4 {
+    color: $title-color;
+    @extend %style-text;
+    margin-top: 32px;
+    margin-left: 16px;
+    margin-bottom: 8px;
+  }
+  ul {
+    margin-left: -32px;
+    display: flex;
+    flex-direction: column;
+  }
+  li {
+    color: $subtitle-color;
+    list-style-type: none;
+    @extend %style-text;
+    margin-top: 14px;
+    margin-left: 16px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  span {
+    color: $title-color;
+    @extend %style-text;
+    margin-left: 210px;
   }
 }
