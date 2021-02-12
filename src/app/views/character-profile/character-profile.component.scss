@@ -47,14 +47,15 @@ section {
     color: $subtitle-color;
     list-style-type: none;
     @extend %style-text;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 14px;
     margin-left: 16px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  span {
-    color: $title-color;
-    @extend %style-text;
-    margin-left: 210px;
+    span {
+      color: $title-color;
+      margin-right: 15px;
+      white-space: nowrap;
+    }
   }
 }

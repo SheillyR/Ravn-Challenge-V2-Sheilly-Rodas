@@ -15,25 +15,25 @@
   <h4>General Information</h4>
   <ul>
     <li>
-      Eye Color
+      <p>Eye Color</p>
       <span>
         {{characterProfile.eyeColor | titlecase }}
       </span>
     </li>
     <li>
-      Hair Color
+      <p>Hair Color</p>
       <span>
         {{characterProfile.hairColor | titlecase }}
       </span>
     </li>
     <li>
-      Skin Color
+      <p>Skin Color</p>
       <span>
         {{characterProfile.skinColor | titlecase}}
       </span>
     </li>
     <li>
-      Birth Year
+      <p>Birth Year</p>
       <span>
         {{characterProfile.birthYear}}
       </span>
@@ -41,6 +41,6 @@
   </ul>
   <h4>Vehicles</h4>
   <li *ngFor="let vehicle of characterProfile.vehicleConnection.vehicles">
-    {{vehicle.name}}
+    <p>{{vehicle.name}}</p>
   </li>
 </section>
