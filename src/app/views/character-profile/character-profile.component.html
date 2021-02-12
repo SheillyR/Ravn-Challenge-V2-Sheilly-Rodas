@@ -40,7 +40,9 @@
     </li>
   </ul>
   <h4>Vehicles</h4>
-  <li *ngFor="let vehicle of characterProfile.vehicleConnection.vehicles">
-    <p>{{vehicle.name}}</p>
-  </li>
+  <ul>
+    <li *ngFor="let vehicle of characterProfile.vehicleConnection.vehicles">
+      <p>{{vehicle.name}}</p>
+    </li>
+  </ul>
 </section>
