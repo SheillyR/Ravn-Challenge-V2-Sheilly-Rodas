@@ -5,15 +5,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-@import url(//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display);
 
 @font-face {
-  font-family: "sfpro regular";
-  src: url("./assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf")
-    format("truetype");
-}
-@font-face {
-  font-family: "sfpro bold";
-  src: url("./assets/fonts/FontsFree-Net-SFProDisplay-Bold.ttf")
-    format("truetype");
+  font-family: "sfpro display bold";
+  src: url("./assets/fonts/sf-pro-display_bold.ttf") format("truetype");
 }
