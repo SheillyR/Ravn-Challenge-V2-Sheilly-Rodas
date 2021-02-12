@@ -24,8 +24,8 @@ export class CharacterComponent implements OnInit {
   }
 
   showCharacterProfile(id: string){
-    this.characterProfile = this.api.getCharacterProfile(id);
-    console.log(this.characterProfile);
+    this.characterProfile = this.api.getCharacterProfile(id).subscribe(result => {
+      this.characterProfile = result.data.person;
+    });
   }
-
 }

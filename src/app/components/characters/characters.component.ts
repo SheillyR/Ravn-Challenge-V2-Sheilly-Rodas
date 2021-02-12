@@ -9,23 +9,17 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class CharactersComponent implements OnInit {
   characters = [] as any;
-  loading: Boolean = false;
+  loading: Boolean = true;
   error!: string;
 
   constructor(public api: ApiService) { }
 
   ngOnInit(): void {
     // Get data from the API
-    const option= this.api.getCharacters().pipe(map(result => result));
-    option.subscribe(({data, loading}) => {
+    this.api.getCharacters().pipe(map(result => result)).subscribe(({data, loading}) => {
       if (data.allPeople.people) this.characters = data.allPeople.people;
       else this.error = "Failed to Load Data";
       this.loading = loading;
     })
-/*     const data  = this.api.getCharacters().pipe(map(result => result.data.allPeople.people));
-    data.subscribe((characters: any[])=> {
-      this.characters = characters;
-    }) */
   }
-
 }
