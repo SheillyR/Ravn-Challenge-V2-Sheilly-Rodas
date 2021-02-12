@@ -16,18 +16,18 @@ export class ContainerComponent implements OnInit {
   ngOnInit(): void {
     // Get status loading or error from API
     const status = this.api.getCharacters().pipe(map(result => result));
-    status.subscribe(result => {
-      if(result.loading === true){
+    status.subscribe(({data, loading, error}) => {
+      if(loading === true){
         this.loading = true;
       }
-      if(result.error !== undefined){
+      if(error !== undefined){
         this.error = true;
       }
-      if(result.data !== undefined){
+      if(data !== undefined){
         this.data = true;
       }
-      console.log(result.loading)
-      console.log(result.data);
+      console.log(loading)
+      console.log(data);
     })
   }
 }

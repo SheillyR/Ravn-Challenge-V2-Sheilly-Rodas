@@ -9,6 +9,7 @@ import gql from 'graphql-tag';
 })
 export class ApiService {
   characters!: Observable<any>;
+  characterProfile!: Observable<any>;
 
   constructor(private apollo: Apollo) { 
   }
@@ -19,6 +20,7 @@ export class ApiService {
       query Characters {
         allPeople{
           people{
+            id
             name
             species{
               name
@@ -30,6 +32,30 @@ export class ApiService {
         }
       }
       `
+    }).valueChanges.pipe(map(result => result));
+  }
+
+  getCharacterProfile(identifier: string): Observable<any>{
+    return this.characterProfile = this.apollo.watchQuery<any>({
+      query: gql`
+      query getPeople($id: ID){
+        person (id: $id) {
+          name
+          eyeColor
+          hairColor
+          skinColor
+          birthYear
+          vehicleConnection {
+            vehicles {
+              name
+            }
+          }
+        }
+      }
+      `, 
+      variables:{ 
+        id: identifier 
+      },
     }).valueChanges.pipe(map(result => result));
   }
 
