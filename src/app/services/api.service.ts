@@ -48,8 +48,6 @@ export class ApiService {
   constructor(private apollo: Apollo) { 
   }
 
-
-
   getCharacters(): Observable<any> {
     return this.characters = this.apollo.watchQuery<any>({
       query: GET_CHARACTERS,
