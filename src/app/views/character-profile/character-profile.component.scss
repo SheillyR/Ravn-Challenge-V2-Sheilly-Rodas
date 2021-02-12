@@ -1,0 +1,13 @@
+$nav-color: #121212;
+$text-color: #ffffff;
+$font-text: "SF Pro Display";
+nav {
+  background-color: $nav-color;
+  justify-content: center;
+  h2 {
+    color: $text-color;
+    font-family: $font-text;
+    font-size: 17px;
+    letter-spacing: 0.0125em;
+  }
+}

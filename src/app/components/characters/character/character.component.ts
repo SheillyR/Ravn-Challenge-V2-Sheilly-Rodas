@@ -24,5 +24,6 @@ export class CharacterComponent implements OnInit {
 
   showCharacterProfile(id: string){
     this.router.navigate(['character-profile'], {state: { data: id }});
+    localStorage.setItem('id', id);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -9,19 +9,24 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class CharacterProfileComponent implements OnInit {
 
-  id!: string;
+  id!: any;
   characterProfile!: any;
 
-  constructor(public activatedRoute: ActivatedRoute, public api: ApiService) { }
+  constructor(public activatedRoute: ActivatedRoute, public api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
-    this.id = history.state.data;
+    this.id = localStorage.getItem('id');
     this.characterProfile = this.api.getCharacterProfile(this.id).subscribe(result => {
       this.characterProfile = result.data.person;
       console.log(this.characterProfile);
       
     });
     console.log(history.state.data)
+  }
+
+  backToListOfCharacters(){
+    this.router.navigate(['home']);
+    localStorage.removeItem('id');
   }
 
 }
