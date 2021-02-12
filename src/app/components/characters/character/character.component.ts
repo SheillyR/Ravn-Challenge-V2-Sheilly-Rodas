@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-character',
@@ -9,7 +10,9 @@ export class CharacterComponent implements OnInit {
   @Input() c = {} as any;
   
   specie!: any;
-  constructor() { }
+  characterProfile!: any;
+
+  constructor(public api: ApiService) { }
 
   ngOnInit(): void {
     if(this.c.species === null){
@@ -18,6 +21,11 @@ export class CharacterComponent implements OnInit {
       this.specie = this.c.species.name;
     }
     
+  }
+
+  showCharacterProfile(id: string){
+    this.characterProfile = this.api.getCharacterProfile(id);
+    console.log(this.characterProfile);
   }
 
 }
