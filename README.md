@@ -21,13 +21,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### List of characters
 
 <div align="center">
-<img src="src/assets/images/allpeople-mobile.png" alt="List of characters" width="60%">
+<img src="src/assets/images/allpeople-mobile.png" alt="List of characters" width="50%" height="50%">
 </div>
 
 ### Details of each character
 
 <div align="center">
-<img src="src/assets/images/details-people-mobile.png" alt="Details of character" width="60%">
+<img src="src/assets/images/details-people-mobile.png" alt="Details of character" width="50%" height="50%">
 </div>
 
 ## 3. Technologies used
