@@ -4,6 +4,40 @@ import { map } from 'rxjs/operators';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag'; 
 
+const GET_CHARACTERS = gql`
+  query Characters {
+    allPeople{
+      people{
+        id
+        name
+        species{
+          name
+        }
+        homeworld{
+          name
+        }
+      }
+    }
+  }
+`;
+
+const GET_CHARACTER_PROFILE = gql`
+  query getPeople($id: ID){
+    person (id: $id) {
+      name
+      eyeColor
+      hairColor
+      skinColor
+      birthYear
+      vehicleConnection {
+        vehicles {
+          name
+        }
+      }
+    }
+  }
+`;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,45 +48,17 @@ export class ApiService {
   constructor(private apollo: Apollo) { 
   }
 
+
+
   getCharacters(): Observable<any> {
     return this.characters = this.apollo.watchQuery<any>({
-      query: gql`
-      query Characters {
-        allPeople{
-          people{
-            id
-            name
-            species{
-              name
-            }
-            homeworld{
-              name
-            }
-          }
-        }
-      }
-      `
+      query: GET_CHARACTERS,
     }).valueChanges.pipe(map(result => result));
   }
 
   getCharacterProfile(identifier: string): Observable<any>{
     return this.characterProfile = this.apollo.watchQuery<any>({
-      query: gql`
-      query getPeople($id: ID){
-        person (id: $id) {
-          name
-          eyeColor
-          hairColor
-          skinColor
-          birthYear
-          vehicleConnection {
-            vehicles {
-              name
-            }
-          }
-        }
-      }
-      `, 
+      query: GET_CHARACTER_PROFILE, 
       variables:{ 
         id: identifier 
       },
