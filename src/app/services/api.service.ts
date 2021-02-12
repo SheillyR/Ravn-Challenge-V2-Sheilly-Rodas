@@ -16,17 +16,21 @@ export class ApiService {
   getCharacters(): Observable<any> {
     return this.characters = this.apollo.watchQuery<any>({
       query: gql`
-      query {
+      query Characters {
         allPeople{
           people{
-          id
-          name
+            name
+            species{
+              name
+            }
+            homeworld{
+              name
+            }
           }
-          
         }
-      
       }
       `
-    }).valueChanges.pipe(map(result => result.data.allPeople.people));
+    }).valueChanges.pipe(map(result => result));
   }
+
 }

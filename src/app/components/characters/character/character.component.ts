@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-character',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character.component.scss']
 })
 export class CharacterComponent implements OnInit {
-
+  @Input() c = {} as any;
+  
+  specie!: any;
   constructor() { }
 
   ngOnInit(): void {
+    if(this.c.species === null){
+      this.specie = 'Human';
+    } else{
+      this.specie = this.c.species.name;
+    }
     
   }
 

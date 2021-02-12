@@ -2,6 +2,8 @@
   Loading...
 </div>
 <div *ngIf="error">
-  Error :(
+  Failed to Load Data
 </div>
-<app-character></app-character>
+<div *ngIf="data">
+  <app-characters></app-characters>
+</div>

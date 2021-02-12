@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ContainerComponent } from './components/container/container.component';
-import { CharacterComponent } from './components/character/character.component';
+import { CharacterComponent } from './components/characters/character/character.component';
 import { HomeComponent } from './views/home/home.component';
 import { CharacterProfileComponent } from './views/character-profile/character-profile.component';
 import { CharactersComponent } from './components/characters/characters.component';
