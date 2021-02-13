@@ -46,6 +46,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## 5. Project links 🔗
 
-- Project Link : https://sheillyr.github.io/Ravn-Challenge-V2-Sheilly-Rodas/home
-- Show site in mobile view: https://www.responsinator.com/?url=https%3A%2F%2Fsheillyr.github.io%2FRavn-Challenge-V2-Sheilly-Rodas%2Fhome
+- Project Link : https://sheillyr.github.io/Ravn-Challenge-V2-Sheilly-Rodas
+- Show site in mobile view: https://www.responsinator.com/?url=https%3A%2F%2Fsheillyr.github.io%2FRavn-Challenge-V2-Sheilly-Rodas
 - Project Board in GitHub: https://github.com/SheillyR/Ravn-Challenge-V2-Sheilly-Rodas/projects/1
