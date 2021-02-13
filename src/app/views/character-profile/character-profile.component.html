@@ -40,7 +40,7 @@
     </li>
   </ul>
   <h4>Vehicles</h4>
-  <ul>
+  <ul *ngIf="vehicles">
     <li *ngFor="let vehicle of characterProfile.vehicleConnection.vehicles">
       <p>{{vehicle.name}}</p>
     </li>

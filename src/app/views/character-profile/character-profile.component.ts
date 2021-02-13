@@ -11,6 +11,7 @@ export class CharacterProfileComponent implements OnInit {
 
   id!: any;
   characterProfile!: any;
+  vehicles!: any;
 
   constructor(public activatedRoute: ActivatedRoute, public api: ApiService, private router: Router) { }
 
@@ -18,10 +19,10 @@ export class CharacterProfileComponent implements OnInit {
     this.id = localStorage.getItem('id');
     this.characterProfile = this.api.getCharacterProfile(this.id).subscribe(result => {
       this.characterProfile = result.data.person;
-      console.log(this.characterProfile);
-      
+      if(this.characterProfile.vehicleConnection.vehicles.length !== 0){
+        this.vehicles = true;
+      }
     });
-    console.log(history.state.data)
   }
 
   backToListOfCharacters(){
