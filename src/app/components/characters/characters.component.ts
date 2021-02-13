@@ -11,6 +11,8 @@ export class CharactersComponent implements OnInit {
   characters = [] as any;
   loading: Boolean = true;
   error: Boolean = false;
+  cursor!: string;
+  lastCursor!: string;
 
   constructor(public api: ApiService) { }
 

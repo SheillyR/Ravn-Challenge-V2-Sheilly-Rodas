@@ -5,20 +5,37 @@ import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag'; 
 
 const GET_CHARACTERS = gql`
-  query Characters {
-    allPeople{
-      people{
+query Characters ($first: Int, $after: String) {
+  allPeople (first: $first, after: $after){
+    totalCount
+    
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    
+    edges{
+      cursor
+      node{
         id
-        name
-        species{
-          name
-        }
-        homeworld{
-          name
-        }
+        edited
       }
     }
+    people{
+      id
+      name
+      species{
+        name
+      }
+      homeworld{
+        name
+      }
+      
+    }
   }
+}
 `;
 
 const GET_CHARACTER_PROFILE = gql`
@@ -51,6 +68,9 @@ export class ApiService {
   getCharacters(): Observable<any> {
     return this.characters = this.apollo.watchQuery<any>({
       query: GET_CHARACTERS,
+      variables: {
+        first: 5,
+      },
     }).valueChanges.pipe(map(result => result));
   }
 
