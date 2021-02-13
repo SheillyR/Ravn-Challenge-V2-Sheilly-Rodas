@@ -5,8 +5,8 @@ import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag'; 
 
 const GET_CHARACTERS = gql`
-query Characters ($first: Int, $after: String) {
-  allPeople (first: $first, after: $after){
+query Characters ($first: Int, $cursor: String) {
+  allPeople (first: $first, after: $cursor){
     totalCount
     
     pageInfo {
@@ -68,9 +68,6 @@ export class ApiService {
   getCharacters(): Observable<any> {
     return this.characters = this.apollo.watchQuery<any>({
       query: GET_CHARACTERS,
-      variables: {
-        first: 5,
-      },
     }).valueChanges.pipe(map(result => result));
   }
 
@@ -82,5 +79,4 @@ export class ApiService {
       },
     }).valueChanges.pipe(map(result => result));
   }
-
 }
